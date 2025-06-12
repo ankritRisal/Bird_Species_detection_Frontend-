@@ -96,6 +96,6 @@ pip install pillow torch numpy torchvision matplotlib flask flask-cors
 ```
 
 2. Clone repository:
-   ```bash
+   ```md
    git clone https://github.com/ankritRisal/Nepal_Endangered_bird_species_detection_system.git
-
+  ```
