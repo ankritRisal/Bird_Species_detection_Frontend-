@@ -1,23 +1,33 @@
-# Bird Species Detection Using Convolutional Neural Networks (CNN)
+# Nepal Endangered Bird Species Detection Using Convolutional Neural Networks (CNN) and Flask
+
+A deep learning web application for detecting and classifying bird species from images. This project combines a Convolutional Neural Network (CNN) trained on a curated dataset of birds with a Flask backend and a responsive frontend to provide users with real-time bird species identification.
 
 ### Project Overview
-This project aims to develop a bird species detection system using deep learning techniques, specifically Convolutional Neural Networks (CNN). The system is designed to identify and classify different bird species from images and provide their Nepali names and scientific names. This model serves a broad range of users including bird enthusiasts, researchers, and conservationists.
 
-### Motivation
-Identifying bird species manually is a time-consuming and error-prone process, especially for non-experts. This system automates the identification process, making it easier for users to recognize bird species accurately. This project contributes to avian research, education, and conservation efforts, particularly for endangered species in Nepal.
+This application enables users to:
+- Upload a bird image via a web interface.
+- Get instant prediction of the bird species using a trained CNN.
+- Get the bird species name in devanagari format
+- View the predicted result directly on the frontend.
+- Reset and upload new images as needed.
+- 
+### Supported Bird Species
 
-### Key Features
-1. Accurate bird species identification from images using CNN.
-2. Provides both Nepali and scientific names of the identified bird species.
-3. Can handle a dataset of 38 bird species.
-4. The system is designed to work with images and has future potential for expansion to include audio recordings.
+The model is trained to recognize the following bird species:
 
-### Technology Stack
-1. Programming Language: Python
-2. Deep Learning Framework: PyTorch
-3. Frontend: HTML, CSS, JavaScript
-4. Backend Framework: Flask
-5. Other Libraries: NumPy, Scikit-learn, Matplotlib, Optuna
+- Abbott’s Babbler Malacocincla abbotti = मोटोठूँडे भ्याकुरमोटोठूँडे भ्याकुर
+- Black Bittern (Dupetor flavicollis) = कालो जूनबकुल्ला 
+- Chestnut Munia Lonchura atricapilla = कोटेरो मुनियाँ 
+- Cinereous Vulture Aegypius monachus = राज गिद्ध  
+- Gould’s Shortwing Brachypteryx stellata = थोप्ले लघुपंख 
+- Upto 38 Endangered Species
+
+### Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Python Flask  
+- **Model**: Convolutional Neural Network (CNN)  
+- **Others**: TensorFlow, Keras, NumPy, OpenCV  
 
 ### Dependencies:
 1. Python 3.x
@@ -27,49 +37,54 @@ Identifying bird species manually is a time-consuming and error-prone process, e
 5. Scikit-learn
 6. Matplotlib
 
+### Project structure:
+  project-name/
+│── backend/            # Flask backend code
+│   ├── apps.py          # Helper functions
+│── frontend/            # Frontend code
+│   ├── index.html
+│   ├── parrot-3601194_1280.jpg
+│   ├── pds.js
+│   ├── plus.png
+│   ├── style.css
+│── README.md           # Project overview and instructions
+│── output.png          # FInal demo-output
+  
+
 ### Dataset
-The dataset used in this project consists of 8073 training images and 402 test images representing 38 different bird species. Each species is labeled with a unique identifier, which is mapped to both its Nepali and scientific names.
+- Trained on 8073 images of 38 different species 
+- labeled with unique identifier, mapped to both devanagari(Nepali) and Scientific names 
 
-### Model Architecture
-The bird species detection system is built using a Convolutional Neural Network (CNN) that consists of:
+### Functionality
+- Image Upload  
+  1. Allows users to select an image via file input.
+  2. Displays the image using `background-image` styling.
+  3. Saves image preview using localStorage for persistence.
+- Auto-poolling Prediction
+  1. JavaScript polls the Flask backend (/get_text) every 2 seconds
+  2. Displays updated predictions dynamically.
+  3. Stores predictions in `localStorage` for a consistent experience.
+- Reset Button
+  1. Sends a `DELETE` request to `/delete-image` in Flask backend.
+  2. Removes stored image from the backend.
+  3. Clears `localStorage` data for a clean start
 
-1. Convolutional layers for feature extraction
-2. Pooling layers for downsampling
-3. Fully connected layers for classification
-4. Softmax activation to predict the bird species
-
-The model also includes techniques such as data augmentation (horizontal flip, rotation, color jitter) to improve generalization and cross-validation for robust performance evaluation.
-
-### Results
-The model achieves:
-1. 73% training accuracy
-2. 76% validation accuracy
-
-Further improvements can be made by expanding the dataset and incorporating more diverse bird species.
-
-### Result Page
+### Demo Page
 ![Result Page](output.png)
 
-### Usage
-1. Upload an image of a bird using the provided web interface.
-2. The system will classify the bird species and display the Nepali and scientific names.
-
-
-### Future Enhancements
-1. Expand dataset to include more bird species.
-2. Integrate audio recordings for species detection.
-3. Improve model accuracy by experimenting with different CNN architectures.
-4. Crowd-sourced dataset: Allow users to contribute images to expand the training dataset.
-
-
 ### Limitations
-1. The model is limited to the current dataset of 38 species.
-2. It may not perform well with blurry images or images containing multiple birds.
-3. The system does not currently support audio-based bird detection.
+1. The model is limited to the current dataset of 38 species
+2. Performance drops on low-quality or obstructed images
+3. No support yet for multi-bird detection or localization
 
 
 ### Contribution
-Feel free to submit issues or contribute to the project by creating a pull request.
+We welcome contributions!
+You can: 
+ - Fork this repo
+ - Create feature branches
+ - Submit pull requests
+ - File issues for bugs or new features
 
 ### License
 This project is licensed under the MIT License.
