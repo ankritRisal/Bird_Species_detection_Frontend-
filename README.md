@@ -36,24 +36,7 @@ The model is trained to recognize the following bird species:
 4. NumPy
 5. Scikit-learn
 6. Matplotlib
-
-
-
-        
-### Project structure:
-  project-name/<br>
-│── backend/            # Flask backend code <br>
-│   ├── apps.py          # Helper functions
-│── frontend/            # Frontend code
-│   ├── index.html
-│   ├── parrot-3601194_1280.jpg
-│   ├── pds.js
-│   ├── plus.png
-│   ├── style.css
-│── README.md           # Project overview and instructions
-│── output.png          # FInal demo-output
   
-
 ### Dataset
 - Trained on 8073 images of 38 different species 
 - labeled with unique identifier, mapped to both devanagari(Nepali) and Scientific names 
