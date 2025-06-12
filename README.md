@@ -73,7 +73,7 @@ You can:
  - File issues for bugs or new features
 
 ### License
-MIT License.
+MIT License
 
 ## Installation 
 1. Installing Dependencies:
