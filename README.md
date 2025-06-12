@@ -91,9 +91,9 @@ This project is licensed under the MIT License.
 
 ## Installation 
 1. Installing Dependencies:
-```bash
-pip install pillow torch numpy torchvision matplotlib flask flask-cors
-```
+  ```bash
+  pip install pillow torch numpy torchvision matplotlib flask flask-cors
+  ```
 
 2. Clone repository:
    ```bash
