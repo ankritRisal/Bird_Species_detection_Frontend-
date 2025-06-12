@@ -89,3 +89,10 @@ You can:
 ### License
 This project is licensed under the MIT License.
 
+## Installation 
+### Installing Dependencies
+```md
+```bash
+pip install pillow torch numpy torchvision matplotlib flask flask-cors
+ 
+
