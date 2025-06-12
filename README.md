@@ -95,6 +95,6 @@ This project is licensed under the MIT License.
 pip install pillow torch numpy torchvision matplotlib flask flask-cors
 
 2. Clone repository:
-```md
-gh repo clone ankritRisal/Nepal_Endangered_bird_species_detection_system
+   ```bash
+   git clone https://github.com/ankritRisal/Nepal_Endangered_bird_species_detection_system.git
 
