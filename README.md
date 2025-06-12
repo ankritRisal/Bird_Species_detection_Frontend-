@@ -53,7 +53,7 @@ The model is trained to recognize the following bird species:
 - **Reset Button**
   1. Sends a `DELETE` request to `/delete-image` in Flask backend.
   2. Removes stored image from the backend.
-  3. Clears `localStorage` data for a clean start
+  3. Clear `localStorage` data for a clean start
 
 ### Demo Page
 ![Result Page](output.png)
