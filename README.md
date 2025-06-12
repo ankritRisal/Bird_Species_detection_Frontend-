@@ -10,7 +10,7 @@ This application enables users to:
 - Get the bird species name in devanagari format
 - View the predicted result directly on the frontend.
 - Reset and upload new images as needed.
-- 
+  
 ### Supported Bird Species
 
 The model is trained to recognize the following bird species:
@@ -56,15 +56,15 @@ The model is trained to recognize the following bird species:
 - labeled with unique identifier, mapped to both devanagari(Nepali) and Scientific names 
 
 ### Functionality
-- Image Upload  
+- **Image Upload**  
   1. Allows users to select an image via file input.
   2. Displays the image using `background-image` styling.
-  3. Saves image preview using localStorage for persistence.
-- Auto-poolling Prediction
-  1. JavaScript polls the Flask backend (/get_text) every 2 seconds
+  3. Saves image preview using `localStorage` for persistence.
+- **Auto-poolling Prediction**
+  1. JavaScript polls the Flask backend `(/get_text)` every 2 seconds
   2. Displays updated predictions dynamically.
   3. Stores predictions in `localStorage` for a consistent experience.
-- Reset Button
+- **Reset Button**
   1. Sends a `DELETE` request to `/delete-image` in Flask backend.
   2. Removes stored image from the backend.
   3. Clears `localStorage` data for a clean start
