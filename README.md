@@ -37,6 +37,14 @@ The model is trained to recognize the following bird species:
 5. Scikit-learn
 6. Matplotlib
 
++---Minor project codes
+ª   +---Training jupyternotebook
+ª           try2.ipynb
+ª           
++---testingenv
+        hello.py
+
+        
 ### Project structure:
   project-name/
 │── backend/            # Flask backend code
