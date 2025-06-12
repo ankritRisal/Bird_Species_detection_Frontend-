@@ -90,9 +90,11 @@ You can:
 This project is licensed under the MIT License.
 
 ## Installation 
-### Installing Dependencies
+1. Installing Dependencies:
 ```md
-```bash
 pip install pillow torch numpy torchvision matplotlib flask flask-cors
- 
+
+2. Clone repository:
+ '''bash
+    gh repo clone ankritRisal/Nepal_Endangered_bird_species_detection_system
 
